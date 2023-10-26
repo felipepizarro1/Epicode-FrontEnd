@@ -1,0 +1,28 @@
+/* IMPOSTAZIONI GENERALI */
+*{
+    font-family: 'Poppins', sans-serif;
+    padding: 2%;
+}
+
+/* HEADER */
+article h1 {
+    font-weight: 800;
+    font-size: xx-large;
+}
+
+.autore {
+    font-weight: 150;
+    color: gray;
+}
+
+/* MAIN */
+
+/* ELEMENTI NEL MAIN - ARTICLE */
+
+/* TABELLE */
+
+/* FORM */
+
+/* ELEMENTI NELL' ASIDE */
+
+/* FOOTER */
