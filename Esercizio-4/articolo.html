@@ -13,10 +13,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   </head>
   <body>
-    <header>
-      <div>
+    <header class="container">
+      <div >
         <img
           src="assets/img/logo.svg"
           alt="logo del blog"
@@ -26,16 +27,16 @@
         <p>Epicode - Il blog dei developers</p>
       </div>
       <nav>
-        <ul>
-          <li><a href="index.html" title="Home Page">Home</a></li>
-          <li>
+        <ul class="ul1">
+          <li class="l2"><a href="index.html" title="Home Page">Home</a></li>
+          <li class="l2">
             <a
               href="articoli.html"
               title="Elenco degli articoli tecnici pubblicati"
               >Articoli</a
             >
           </li>
-          <li>
+          <li class="l2">
             <a href="contatti.html" title="Candidati inviando un tuo cv">Job</a>
           </li>
         </ul>
@@ -45,20 +46,21 @@
     <main>
       <article>
         <h1>Come creare un template per i post</h1>
-        <p class="autore">di Mario Rossi - <span>pubblicato il 25-10-2020</span></p>
+        
+        <p class="autore"><i class="fas fa-pen"></i>di Mario Rossi - <span><i class="fas fa-clock"></i>pubblicato il 25-10-2020</span></p>
         <p>
           La prima cosa da fare è suddividere in blocchi logici la pagina,
           identificando le <strong>parti comuni</strong> da applicare a tutte le
           pagine
         </p>
         <p>Le varie aree saranno quindi suddivise in:</p>
-        <ul>
-          <li>Contenuti di intestazione del tag <code>&lt;header&gt;</code></li>
-          <li>
+        <ul class="ul1">
+          <li class="l2">Contenuti di intestazione del tag <code>&lt;header&gt;</code></li>
+          <li class="l2">
             Contenuti centrali variabili del tag
             <code>&lt;main&gt;</code> (corpo principale)
           </li>
-          <li>
+          <li class="l2">
             Contenuti di fine pagina comuni, da inserire nel tag
             <code>&lt;footer&gt;</code>
           </li>
