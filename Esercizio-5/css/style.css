@@ -1,0 +1,64 @@
+/* Your styles here */
+
+body{
+    font-family:'Open Sans', sans-serif;
+    line-height: 1.5;
+    padding: 1px;
+}
+
+
+
+
+/*Header */
+
+header {
+    background-color: black;
+    text-align: center;
+}
+
+header div img {
+    width: 150px;
+    padding: 2em;
+}
+
+
+/*Main*/
+
+main div {
+    padding: 2em;
+}
+
+main h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: #25a1c4;
+}
+
+main h1, main p {
+    text-align: center;
+    margin: 1em;
+}
+
+main div button{
+    padding: 0.9em;
+    border: 0;
+    background-color: darkorange;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 0.6rem;
+    color: white;
+    
+}
+
+.section1 {
+
+    background-image: url(/images/banner.jpg);
+    background-attachment: fixed;
+    
+}
+
+
+
+
+
