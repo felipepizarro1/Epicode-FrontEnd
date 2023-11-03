@@ -141,15 +141,15 @@ console.log("****************")
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 function upperFirst(parola, parole) {
-    var upperLetter = [];
+    var upperLetter;
         for(let i = 0; arguments.length>i; i++){
-            upperLetter[i] += arguments[i].charAt(0).toUpperCase()
+            upperLetter += arguments[i].charAt(0).toUpperCase() + arguments[i].substring(1);
             
         }
         console.log(upperLetter)
 
 }
-upperFirst("parola","ciao","salve");
+upperFirst("parola","ciao","salve","buongiorno");
 
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
