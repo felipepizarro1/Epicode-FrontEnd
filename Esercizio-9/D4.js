@@ -150,6 +150,8 @@ function upperFirst(parola, parole) {
 
 }
 upperFirst("parola","ciao","salve","buongiorno");
+/* dubbio con questo 
+
 
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere

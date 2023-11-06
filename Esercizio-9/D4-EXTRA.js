@@ -1,12 +1,46 @@
 // Esercizi aggiuntivi (facoltativi) per D4
 
 /* EXTRA 1
- Scrivi una funzione chiamata "checkArray" che riceve un array di numeri casuali (creati con la funzione "giveMeRandom") e per ogni elemento stampa in console
- se il suo valore è maggiore di 5 o no.
+ Scrivi una funzione chiamata "checkArray" che riceve un array di numeri casuali (creati con la funzione "giveMeRandom") e per ogni elemento stampa in console se il suo valore è maggiore di 5 o no.
  La funzione deve inoltre ritornare la somma di tutti i valori maggiori di 5.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+let array;
+function giveMeRandom(){
+    array = [];
+    for(i=0; i<10; i++){
+        array[i] = Math.floor(Math.random() * 10);
+    }
+    console.log(array)
+    return array; //questo return mi mancava, ho perso tanto tempo!!!!
+    
+}
+const newArray = giveMeRandom();
+
+console.log("***")
+
+
+function checkArray(array){
+    let somma = 0;
+    for(let i = 0; i<10;i++){
+        if(array[i]>5){
+            console.log(array[i] + "è maggiore di 5")
+            somma += array[i];
+            
+        } else console.log(array[i] + "è minore di 5")
+           
+        
+        
+    }
+    console.log(somma)
+
+
+}
+console.log(checkArray(newArray));
+
+console.log("***")
 
 /* EXTRA 2
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
@@ -15,12 +49,51 @@
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const shoppingCart = [{
+    price: 25,
+    name: "",
+    id: 0,
+    quantity: 0    
+},{
+    price: 10,
+    name: "",
+    id: 0,
+    quantity: 0    
+}];
+
+function shoppingCartTotal(cart){
+    let totalPrice = 0; //QUI HO AVUTO UN PROBLEMA. NON AVEVO INIZIALIZATO LA VARIABILE QUINDI MI TORNAVA NaN!
+    for(i=0; cart.length >i;i++){
+        totalPrice += cart[i].price;
+    }
+    console.log(totalPrice);
+    return totalPrice;
+}
+
+shoppingCartTotal(shoppingCart);
+console.log("***")
+
+
+
+
+
 /* EXTRA 3
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
  Crea una funzione chiamata "addToShoppingCart" che riceve un nuovo oggetto dello stesso tipo, lo aggiunge a "shoppingCart" e ritorna il nuovo numero totale degli elementi.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+function addToShoppingCart(price, name, id, quantity){
+    shoppingCart.push({price,name,id,quantity})
+    console.log(shoppingCart);
+    return shoppingCart;
+    
+
+}
+
+addToShoppingCart(35,"Sushi",123123,12);
+console.log("***")
 
 /* EXTRA 4
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
@@ -29,6 +102,20 @@
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function maxShoppingCart(shoppingCart){
+    let max = shoppingCart[0];
+    for(i=0; shoppingCart.length>i; i++){
+      if(max.price < shoppingCart[i].price){
+        max = shoppingCart[i];
+      } 
+    }
+    console.log(max)
+    return max;
+
+}
+
+maxShoppingCart(shoppingCart);
+console.log("***")
 /* EXTRA 5
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
  Crea una funzione chiamata "latestShoppingCart" che riceve l'array "shoppingCart" e ritorna l'ultimo elemento.
@@ -36,12 +123,30 @@
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function latestShoppingCart(shoppingCart){
+    
+    let last = shoppingCart[shoppingCart.length-1]; //MI MANCAVA "SHOPPINGCART.LENGTH. AVEVO SOLO LENGTH"
+    console.log(last);
+    return last;
+}
+
+latestShoppingCart(shoppingCart);
+console.log("***")
+  
+
+
 /* EXTRA 6
  Crea una funzione chiamata "loopUntil" che riceve un numero intero come parametro con valore tra 0 e 9.
  La funzione è composta da un ciclo che stampa un numero casuale tra 0 e 9 finchè il numero casuale non è maggiore di x per tre volte di fila.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+function loopUntil(n){
+    
+}
+
+loopUntil(5);
 
 /* EXTRA 7
 Crea una funzione chiamata "average" che riceve un array come parametro e ne ritorna la media aritmetica. La funzione salta automaticamente i valori non numerici nell'array.
