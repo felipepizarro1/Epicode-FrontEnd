@@ -54,7 +54,7 @@ function crazyDiff(n){
         console.log("Differenza: " + diff2);
 
     }
-    
+    //usare Math.abs()
 
 }
 
