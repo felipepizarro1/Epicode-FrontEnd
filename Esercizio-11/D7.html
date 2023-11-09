@@ -35,7 +35,7 @@
 
   <body>
     <div>
-      <h1>Questo è il titolo della pagina</h1>
+      <h1 onclick=makeItClickable()>Questo è il titolo della pagina</h1>
       <h2>Questo è il sottotitolo della pagina</h2>
     </div>
 
@@ -70,7 +70,7 @@
 
     <div id="tableArea"></div>
 
-    <footer>
+    <footer onclick=revealFooterLink()>
       <h3>
         DOM Manipulation is super
         <a
@@ -98,21 +98,21 @@
 
       const addClassToTitle = function () {
         let title = document.querySelector("div > h1");
-        title.classList.add("myHeading");
+        title.className = "myHeading";
 
       }
 
-      console.log(addClassToTitle);
+      addClassToTitle();
       /* ESERCIZIO 3
        Scrivi una funzione che cambi il testo dei p figli di un div
       */
 
       const changePcontent = function () {
-        let p = document.querySelector("div > p");
-        p.innerHTML = "Nuovo testo"
-        
-        
+        let p = document.querySelectorAll("div > p");
 
+        p.forEach(paragraph => paragraph.innerText = "Nuovo testo")
+        
+        
       }
 
     changePcontent();
@@ -177,28 +177,50 @@ addToTheSecond();
       */
 
       const paintItGreen = function () {
-        
+        let lista = document.querySelectorAll("ul")
+        lista.forEach(ul => ul.style.background = "green")
+
       }
+
+      paintItGreen();
 
       /* ESERCIZIO 9
        Scrivi una funzione che rimuova l'ultima lettera dall'h1 ogni volta che l'utente lo clicca
       */
 
-      const makeItClickable = function () {}
+      const makeItClickable = function () {
+        let h1 = document.querySelector("div > h1")
+        let txt = h1.innerText;
+        txt = txt.slice(0, -1)
+        h1.innerText = txt
+      }
 
       /* ESERCIZIO 10
        Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
       */
 
-      const revealFooterLink = function () {}
+      const revealFooterLink = function () {
+          const linkFooter = document.querySelector('footer h3 >a')
+          const txt = linkFooter.getAttribute('href');
+          alert(txt);
+      }
 
       /* ESERCIZIO 11
        Crea una funzione che crei una tabella nell'elemento con id "tableArea". 
        La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
     */
 
-      const generateTable = function () {}
+      const generateTable = function () {
+        let divTableArea = document.querySelector("#tableArea");
+        let table = document.createElement("table");
+        table.style.border = "1px solid black";
+        let tr = document.createElement("tr");
+        let th1 = document.createElement("th");
+        th1.
 
+      }
+
+      generateTable();
       /* ESERCIZIO 12
        Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
     */
@@ -215,7 +237,13 @@ addToTheSecond();
       Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
     */
 
-      const changeColorWithRandom = function () {}
+      const changeColorWithRandom = function () {
+        let ele = document.querySelector("#changeMyColor");
+        let red = Math.round(Math.random()*255)
+        let green = Math.round(Math.random()*255)
+        let blue = Math.round(Math.random()*255)
+        ele.style.color = `rgb(${red},${green},${blue})`;
+      }
 
       /* EXTRA ESERCIZIO 16
       Crea una funzione che elimini le vocali da ogni elemento testuale della pagina (puoi aiutarti con i nuovi metodi degli array di ES6)
