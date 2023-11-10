@@ -1,0 +1,19 @@
+html {
+    background-color: aqua;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+table, th, td {
+    border: 1px solid;
+    display: inline-block;
+  }
+
+  td {
+    text-align: center;
+    width: 3rem;
+  }
+
+
+  .scelta {
+    background-color: red;
+  }
