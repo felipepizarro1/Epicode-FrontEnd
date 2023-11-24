@@ -10,13 +10,32 @@ header nav ul{
     display: flex;
     flex-direction: column;
     list-style: none;
+    
+
+
 }
+
+@keyframes miaFunc {
+    from{ transform: translateX(0%); background-color: aliceblue;}
+    25%{}
+    50%{transform: translateX(200%); background-color: antiquewhite;}
+    75%{}
+    to{ transform: translateX(100%);background-color: beige;}
+    
+}
+
+
 
 header nav ul li{
     position: relative;
     padding: 10px;
     background-color: #d2b48c; /* Color café claro */
     border-radius: 10px; /* Borde redondeado */
+    width: 150px;
+    background-color: aliceblue;
+    border: 2px solid black;
+
+    animation: miaFunc 2500ms ease-in-out 0.5s infinite alternate;
 }
 
 .infoProduct{
@@ -24,13 +43,34 @@ header nav ul li{
     flex-direction: column;
     align-items: center;
     padding: 1em;
+    transition: transform 2500ms ease-in-out 1s, background-color 1000ms;
+
 
 }
 
+.infoProduct:hover{
+    transform: scale3d(1.5, 1.5, 1.5);
+    background-color:aqua;
+}
+
 .cartProduct{
+    width: 150px;
     background-color: #ffdf7f;
     border-radius: 3em;
     padding: 1em 3em;
+    /* transform: skew(25deg, 25deg); */
+    /* transform: matrix(1.2, 0.2, -1, 0.9, 0, 20); */
+    /* transform: scaleX(2); */
+    /* transition-property: width;
+    transition-duration: 2000ms; */
+    transition: width 2500ms ease-in-out 0.5s;
+
+
+    
+}
+
+.cartProduct:hover {
+    width: 300px;
 }
 
 .cartProduct a{
