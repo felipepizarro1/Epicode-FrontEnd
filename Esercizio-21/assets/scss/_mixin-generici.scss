@@ -1,0 +1,18 @@
+@mixin nomeMixin(){
+    color: white;
+    text-align: center;
+}
+
+@mixin paramMixin($primaryFont, $weight){
+    font-weight: $weight;
+    font-size: $primaryFont;
+}
+
+@mixin backGMixin($prop, $value){
+    /* {$param} -> interpolazione Sass */
+    @if $prop == 'color' {
+        background-#{$prop}: $value;
+        #{$prop}: darken($value, 25%);
+    }
+    
+}

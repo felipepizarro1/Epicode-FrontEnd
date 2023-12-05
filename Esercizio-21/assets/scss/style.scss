@@ -1,0 +1,61 @@
+/* Style Scss */
+
+@import 'reset';
+@import 'colori';
+@import 'mixin-generici';
+
+
+
+body {
+    background-color: $light-color-primary;
+    h1{
+        color: $darken-color-primary;
+
+        @media screen and (min-width: 768px){
+            color: black;
+        }
+    }
+    p {
+        @include nomeMixin();
+        @include paramMixin(1.3em, normal);
+    }
+
+    div.img{
+        width: 250px;
+        height: 250px;
+        background-image: url('../img/bootstrap.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    footer{
+        @include backGMixin("color", $darken-color-primary);
+        h3{
+            @include nomeMixin();
+            @include paramMixin(2.5em, lighter);
+            text-decoration: underline;
+        }
+    }
+}
+
+$num: 0,1,2,3,4,5;
+
+@each $pad in $num {
+    .p-#{$pad} {
+        padding: #{$pad} + 'em';
+    }
+}
+
+@for $i from 0 to 5 {
+    .m-#{$i}{
+        margin: #{$i} + 'em';
+    }
+}
+
+$i: 0;
+@while ($i <= 5) {
+    .box-#{$i} {
+        border: $i+'px' solid black;
+    }
+    $i: $i + 1;
+}

@@ -1,0 +1,5 @@
+/* Partial Colori */
+
+$color-primary: red;
+$light-color-primary: lighten($color-primary, 20%);
+$darken-color-primary: darken($light-color-primary, 15%);

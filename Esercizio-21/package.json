@@ -1,0 +1,14 @@
+{
+  "name": "esercizio-21",
+  "version": "1.0.0",
+  "description": "Live Code sass giorno 2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Felipe",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.69.5"
+  }
+}
