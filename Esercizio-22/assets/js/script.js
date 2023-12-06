@@ -1,4 +1,4 @@
-// Variabili JS
+
 class User {
     constructor(firstName,lastName,age,location){
         this.firstName = firstName;
@@ -20,3 +20,23 @@ let Mario = new User("Mario","Rossi",59,"Milano");
 let David = new User("David","Pizarro",65,"Valparaíso");
 
 Mario.confronto(David);
+
+/************************************************************************************************ */
+
+class Pet {
+    constructor(petName, ownerName, species, breed){
+        this.petName = petName;
+        this.ownerName = ownerName;
+        this.species = species;
+        this.breed = breed;
+    }
+    padrone(altro){
+        if(this.ownerName === altro.ownerName){
+            return true;
+        }
+    }
+
+}
+
+let btn = document.getElementById("#petForm button")
+
