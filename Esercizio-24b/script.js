@@ -47,7 +47,7 @@ function createList(books){
         let text = document.createElement('p');
         text.classList.add('card-text');
         text.textContent = "Category " + b.category;
-        //a (button)
+        //SCARTA (button)
         let link = document.createElement('a');
         link.classList.add('btn','btn-danger');
         link.setAttribute('href','#');
@@ -58,9 +58,26 @@ function createList(books){
 
         })
 
+        //CARRELLO (bUtton)
+        let link2 = document.createElement('a');
+        link2.classList.add('btn','btn-primary', 'm-2');
+        link2.setAttribute('href','#');
+        link2.textContent = 'Compra ora';
+        link2.addEventListener('click',(e)=>{
+            e.preventDefault();
+            sessionStorage.setItem('book',b.title);
+            let carrello = document.querySelector('.container ul')
+            let book = document.createElement('li');
+            book.textContent = b.title;
+            carrello.appendChild(book);
+
+
+        })
+
         //APPENDS
         cardBody.appendChild(title);
         cardBody.appendChild(text);
+        cardBody.appendChild(link2);
         cardBody.appendChild(link);
 
         card.appendChild(img);
@@ -69,6 +86,7 @@ function createList(books){
         col.appendChild(card);
         row.appendChild(col);
 
+        //CARRELLO
 
 
 
