@@ -26,7 +26,7 @@ function createList(books){
     books.forEach(b =>{
         //col
         let col = document.createElement('div');
-        col.classList.add('col-3');
+        col.classList.add('col-md-3','col-sm-12','p-2');
         //card
         let card = document.createElement('div');
         card.classList.add('card');
@@ -74,7 +74,19 @@ function createList(books){
 
         })
 
+        //DELETE (BOOK)
+        let link3 = document.createElement('a');
+        link3.classList.add('btn','btn-danger', 'm-2');
+        link3.setAttribute('href','#');
+        link3.textContent = 'Elimina';
+        link3.addEventListener('click',(e)=>{
+            e.preventDefault();
+            sessionStorage.removeItem(b.title);
+        })
+
         //APPENDS
+        
+
         cardBody.appendChild(title);
         cardBody.appendChild(text);
         cardBody.appendChild(link2);
