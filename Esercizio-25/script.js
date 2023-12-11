@@ -35,6 +35,13 @@ function queryInput(query){
             img.setAttribute('src', j.src.small);
             img.setAttribute('width', '100%');
             img.setAttribute('height', '225');
+            img.addEventListener('click',(e)=>{
+                e.preventDefault();
+               localStorage.setItem('thisImage', JSON.stringify(j));
+               window.open('Details.html', '_blank');
+                
+
+            })
             //img title
             let title = document.createElement('title');
             title.textContent = "Placeholder";
@@ -45,6 +52,14 @@ function queryInput(query){
             let h5 = document.createElement('h5');
             h5.classList.add('card-title');
             h5.textContent = j.alt;
+           
+            h5.addEventListener('click',(e)=>{
+                e.preventDefault();
+               localStorage.setItem('thisImage', JSON.stringify(j));
+               window.open('Details.html', '_blank');
+                
+
+            })
             //p card
             let p = document.createElement('p');
             p.classList.add('card-text');
@@ -60,6 +75,10 @@ function queryInput(query){
             btnView.setAttribute('type', 'button');
             btnView.classList.add('btn', 'btn-sm', 'btn-outline-secondary');
             btnView.textContent = 'View';
+            btnView.addEventListener('click',(e)=>{
+                e.preventDefault();
+                alert('HolA!')
+            })
             // Button Edit
             let btnEdit = document.createElement('button');
             btnEdit.setAttribute('type', 'button');
@@ -104,7 +123,7 @@ function queryInput(query){
 }
 
     
-    let form = document.querySelector(".form-inline")
+    let form = document.querySelector(".form-inline")  //RICHIESTA FORM
     form.addEventListener('submit',(e)=>{
         e.preventDefault();
         let input = form.querySelector('input');
@@ -211,7 +230,7 @@ loadBtn.addEventListener('click', (e)=>{ // RICHIESTA LOAD IMAGES
 
 
     
-    console.log("works!")
+  
 })
 
 //***************************************************************************************************************************************** */
