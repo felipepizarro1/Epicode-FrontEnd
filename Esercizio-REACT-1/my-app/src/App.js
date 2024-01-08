@@ -42,7 +42,7 @@ function App() {
      <Button nome="Button React"/>
      <Image srcUrl="https://i.natgeofe.com/n/528dc615-a30a-496f-b005-154995111cb3/torres-del-paine-national-park-patagonia.jpg?w=636&h=424" />
      {data.results.map(ele=>(
-     <Card name={ele.name} homeworld={ele.homeworld}/>
+     <Card name={ele.name} height={ele.height}/>
      )
      )}
      
